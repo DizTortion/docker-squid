@@ -1,19 +1,2 @@
-kind: pipeline
-type: docker
-name: default
-
-steps:
-  - name: image
-    image: plugins/docker
-    settings:
-      repo: harbor.home.hoffmeister.biz/diztortion/squid
-      registry: harbor.home.hoffmeister.biz
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      tags: latest
-      auto_tag: true
-    when:
-      branch:
-        - master
+kind: template
+load: makefile-podman.yaml
