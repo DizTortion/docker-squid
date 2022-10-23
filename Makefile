@@ -2,7 +2,7 @@ REGISTRY=harbor.home.hoffmeister.biz
 IMAGE=diztortion/squid
 REGISTRY_IMAGE=${REGISTRY}/${IMAGE}
 
-PACKAGE_NAME=acf-squid
+PACKAGE_NAME=squid
 
 .PHONY: all build push clean clean_all
 
